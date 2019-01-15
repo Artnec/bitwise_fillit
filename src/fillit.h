@@ -24,7 +24,7 @@ typedef struct	s_tetreminos
 }				t_tetreminos;
 
 
-void			parse_and_validate(char *file_content, int size, t_coordinates *data);
+void			parse_and_validate(char *file_content, int size, t_coordinates *tetros);
 void			fillit(t_tetreminos *t, int tetros_count, int map_side_size);
 
 #endif
