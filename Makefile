@@ -2,7 +2,7 @@ NAME		=	bitwise_fillit
 
 CC			=	clang
 
-FLAGS		=	-O3 -Wall -Werror -Wextra
+FLAGS		=	-O3 -Wall -Werror -Wextra -Wshadow
 
 SRC			=	main.c	fillit.c	parse_and_validate.c
 
@@ -15,6 +15,9 @@ SRC_DIR		=	src/
 OBJ_DIR		=	obj/
 
 all: $(NAME)
+
+analyze:
+	cppcheck -q --enable=all --inconclusive $(SRC_DIR)
 
 obj:
 	mkdir -p $(OBJ_DIR)
